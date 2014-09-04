@@ -25,9 +25,9 @@ public class Questionneur extends UtilisateurRole implements Serializable {
 	private static final long serialVersionUID = -8158085400260818751L;
 	/**
 	 */
-	protected ArrayList<Reponse> listeQuestions = new ArrayList<Reponse>();
+	protected ArrayList<Question> listeQuestions = new ArrayList<Question>();
 	
-	public ArrayList<Reponse> getListeQuestions() {
+	public ArrayList<Question> getListeQuestions() {
 		return listeQuestions;
 	}
 
