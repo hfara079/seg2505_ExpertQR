@@ -1,21 +1,67 @@
+/**
+ * This file contains material supporting the course SEG2505: Introduction to Software 
+ * Engineering at the University of Ottawa.
+ *
+ * This program is free software; permission is hereby granted to use, copy, modify,
+ * and distribute this source code, or portions thereof, for any purpose, without fee,
+ * subject to the restriction that the copyright notice may not be removed
+ * or altered from any source or altered source distribution.
+ * The software is released on an as-is basis and without any warranties of any kind.
+ * In particular, the software is not guaranteed to be fault-tolerant or free from failure.
+ * The author disclaims all warranties with regard to this software, any use,
+ * and any consequent failure, is purely the responsibility of the user.
+ */
 package com.eecs.seg2505.expertqr.model;
 
-import com.eecs.seg2505.expertqr.Constantes;
+import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Expert extends Utilisateur {
-	protected String expertiseID = Constantes.STRING_VIDE;
+public class Expert extends UtilisateurRole implements Serializable {
+	
+	private static final long serialVersionUID = 5736373841598132425L;
+	/**
+	 */
+	protected Expertise expertise = null;
+	/**
+	 */
+	protected double cote = -1;
+	/**
+	 */
+	protected ArrayList<Reponse> listeReponses = new ArrayList<Reponse>();
 
 	public Expert() {
 		super();
 	}
 
-	public String getExpertiseID() {
-		return expertiseID;
+	/**
+	 * @return
+	 */
+	public Expertise getExpertise() {
+		return expertise;
 	}
 
-	public void setExpertiseID(String expertiseID) {
-		this.expertiseID = expertiseID;
+	/**
+	 * @param expertiseID
+	 */
+	public void setExpertise(Expertise expertise) {
+		this.expertise = expertise;
+	}
+
+	/**
+	 * @return
+	 */
+	public double getCote() {
+		return cote;
+	}
+
+	/**
+	 * @param cote
+	 */
+	public void setCote(double cote) {
+		this.cote = cote;
 	}
 	
-	
+	public ArrayList<Reponse> getListeReponses() {
+		return listeReponses;
+	}
 }

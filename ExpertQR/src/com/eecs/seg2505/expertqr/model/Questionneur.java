@@ -11,10 +11,20 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
+package com.eecs.seg2505.expertqr.model;
 
-package com.eecs.seg2505.expertqr;
+import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Constantes {
+public class Questionneur extends UtilisateurRole implements Serializable {
 
-	public static String STRING_VIDE = "";
+	private static final long serialVersionUID = -8158085400260818751L;
+	/**
+	 */
+	protected ArrayList<Reponse> listeQuestions = new ArrayList<Reponse>();
+	
+	public ArrayList<Reponse> getListeQuestions() {
+		return listeQuestions;
+	}
+
 }

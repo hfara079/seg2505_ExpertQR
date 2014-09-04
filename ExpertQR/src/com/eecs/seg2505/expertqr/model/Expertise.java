@@ -1,26 +1,42 @@
+/**
+ * This file contains material supporting the course SEG2505: Introduction to Software 
+ * Engineering at the University of Ottawa.
+ *
+ * This program is free software; permission is hereby granted to use, copy, modify,
+ * and distribute this source code, or portions thereof, for any purpose, without fee,
+ * subject to the restriction that the copyright notice may not be removed
+ * or altered from any source or altered source distribution.
+ * The software is released on an as-is basis and without any warranties of any kind.
+ * In particular, the software is not guaranteed to be fault-tolerant or free from failure.
+ * The author disclaims all warranties with regard to this software, any use,
+ * and any consequent failure, is purely the responsibility of the user.
+ */
 package com.eecs.seg2505.expertqr.model;
 
-import java.util.UUID;
+import java.io.Serializable;
 
 import com.eecs.seg2505.expertqr.Constantes;
 
-public class Expertise {
+public class Expertise implements Serializable {
 
-	protected String ID = Constantes.STRING_VIDE;
+	private static final long serialVersionUID = -3235529468817495364L;
+	/**
+	 */
 	protected String texte = Constantes.STRING_VIDE;
 	
 	public Expertise() {
-		this.ID = UUID.randomUUID().toString();
 	}
 	
-	public String getID() {
-		return this.ID;
-	}
-	
+	/**
+	 * @return
+	 */
 	public String getTexte() {
 		return texte;
 	}
 	
+	/**
+	 * @param texte
+	 */
 	public void setTexte(String texte) {
 		this.texte = texte;
 	}

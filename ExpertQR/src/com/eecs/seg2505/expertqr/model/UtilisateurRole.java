@@ -11,10 +11,12 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
+package com.eecs.seg2505.expertqr.model;
 
-package com.eecs.seg2505.expertqr;
+import java.io.Serializable;
 
-public class Constantes {
+public class UtilisateurRole implements Serializable {
 
-	public static String STRING_VIDE = "";
+	private static final long serialVersionUID = -5798359383304635795L;
+
 }

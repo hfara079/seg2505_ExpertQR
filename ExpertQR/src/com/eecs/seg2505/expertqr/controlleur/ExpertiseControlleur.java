@@ -11,10 +11,28 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
+package com.eecs.seg2505.expertqr.controlleur;
 
-package com.eecs.seg2505.expertqr;
+import com.eecs.seg2505.expertqr.db.DBFacade;
+import com.eecs.seg2505.expertqr.model.Expertise;
 
-public class Constantes {
+public class ExpertiseControlleur {
 
-	public static String STRING_VIDE = "";
+	protected DBFacade dbFacade = null;
+	
+	public ExpertiseControlleur(DBFacade dbFacade) {
+		this.dbFacade = dbFacade;
+	}
+	
+	/**
+	 * Méthode pour sauvegarder une Expertise
+	 * @param expertise
+	 */
+	public void sauvegardeExpertise(Expertise expertise) {
+		if (expertise != null
+				&& expertise.getTexte() != null
+				&& !expertise.getTexte().isEmpty()) {
+			dbFacade.sauvegardeExpertise(expertise);
+		}
+	}
 }

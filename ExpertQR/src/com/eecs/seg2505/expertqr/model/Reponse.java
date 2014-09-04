@@ -1,54 +1,94 @@
+/**
+ * This file contains material supporting the course SEG2505: Introduction to Software 
+ * Engineering at the University of Ottawa.
+ *
+ * This program is free software; permission is hereby granted to use, copy, modify,
+ * and distribute this source code, or portions thereof, for any purpose, without fee,
+ * subject to the restriction that the copyright notice may not be removed
+ * or altered from any source or altered source distribution.
+ * The software is released on an as-is basis and without any warranties of any kind.
+ * In particular, the software is not guaranteed to be fault-tolerant or free from failure.
+ * The author disclaims all warranties with regard to this software, any use,
+ * and any consequent failure, is purely the responsibility of the user.
+ */
 package com.eecs.seg2505.expertqr.model;
 
-import java.util.UUID;
+import java.io.Serializable;
 
 import com.eecs.seg2505.expertqr.Constantes;
 
-public class Reponse {
+public class Reponse implements Serializable {
 	
-	protected String ID = Constantes.STRING_VIDE;
+	private static final long serialVersionUID = 2028078514689553029L;
+	/**
+	 */
 	protected String texte = Constantes.STRING_VIDE;
-	protected String questionID = Constantes.STRING_VIDE;
+	/**
+	 */
 	protected String expertID = Constantes.STRING_VIDE;
+	/**
+	 */
 	protected int evaluation = -1;
+	/**
+	 */
+	protected Question question = null;
 	
 	public Reponse() {	
-		this.ID = UUID.randomUUID().toString();
 	}
 	
-	public String getID() {
-		return this.ID;
-	}
-	
+	/**
+	 * @return
+	 */
 	public String getTexte() {
 		return texte;
 	}
 	
+	/**
+	 * @param texte
+	 */
 	public void setTexte(String texte) {
 		this.texte = texte;
 	}
 	
-	public String getQuestionID() {
-		return questionID;
-	}
-	
-	public void setQuestionID(String questionID) {
-		this.questionID = questionID;
-	}
-	
+	/**
+	 * @return
+	 */
 	public String getExpertID() {
 		return expertID;
 	}
 	
+	/**
+	 * @param expertID
+	 */
 	public void setExpertID(String expertID) {
 		this.expertID = expertID;
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getEvaluation() {
 		return evaluation;
 	}
 	
+	/**
+	 * @param eval
+	 */
 	public void setEvaluation(int eval) {
 		this.evaluation = eval;
+	}
+
+	/**
+	 * @return
+	 */
+	public Question getQuestion() {
+		return question;
+	}
+
+	/**
+	 * @param question
+	 */
+	public void setQuestion(Question question) {
+		this.question = question;
 	}
 }

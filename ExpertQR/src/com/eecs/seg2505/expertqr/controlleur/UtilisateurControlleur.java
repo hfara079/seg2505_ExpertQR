@@ -11,10 +11,30 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
+package com.eecs.seg2505.expertqr.controlleur;
 
-package com.eecs.seg2505.expertqr;
+import com.eecs.seg2505.expertqr.db.DBFacade;
+import com.eecs.seg2505.expertqr.model.Utilisateur;
 
-public class Constantes {
-
-	public static String STRING_VIDE = "";
+public class UtilisateurControlleur {
+	
+	protected DBFacade dbFacade = null;
+	
+	public UtilisateurControlleur(DBFacade dbFacade) {
+		this.dbFacade = dbFacade;
+	}
+	
+	/**
+	 * Méthode pour sauvegarder un Utilisateur
+	 * @param utilisateur
+	 */
+	public void sauvegardeUtilisateur(Utilisateur utilisateur) {
+		if (utilisateur != null
+				&& utilisateur.getNom() != null
+				&& !utilisateur.getNom().isEmpty()
+				&& utilisateur.getID() != null
+				&& !utilisateur.getID().isEmpty()) {
+			dbFacade.sauvegardeUtilisateur(utilisateur);
+		}
+	}
 }
