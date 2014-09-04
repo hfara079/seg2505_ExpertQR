@@ -11,32 +11,45 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
-package com.eecs.seg2505.expertqr.controlleur;
+package ca.uottawa.eecs.seg2505.expertqr.controlleur;
 
-import com.eecs.seg2505.expertqr.db.DBFacade;
-import com.eecs.seg2505.expertqr.model.Expertise;
+import ca.uottawa.eecs.seg2505.expertqr.db.DBFacade;
+import ca.uottawa.eecs.seg2505.expertqr.model.Question;
+import ca.uottawa.eecs.seg2505.expertqr.model.Reponse;
 
 /**
  * @author Hanna
  *
  */
-public class ExpertiseControlleur {
+public class ReponseControlleur {
 
 	protected DBFacade dbFacade = null;
 	
-	public ExpertiseControlleur(DBFacade dbFacade) {
+	public ReponseControlleur(DBFacade dbFacade) {
 		this.dbFacade = dbFacade;
 	}
 	
 	/**
-	 * Méthode pour sauvegarder une Expertise
-	 * @param expertise
+	 * Méthode pour sauvegarder une Reponse
+	 * @param reponse
 	 */
-	public void sauvegardeExpertise(Expertise expertise) {
-		if (expertise != null
-				&& expertise.getTexte() != null
-				&& !expertise.getTexte().isEmpty()) {
-			dbFacade.sauvegardeExpertise(expertise);
+	public void sauvegardeReponse(Reponse reponse) {
+		if (reponse != null
+				&& reponse.getTexte() != null
+				&& !reponse.getTexte().isEmpty()
+				&& reponse.getExpertID() != null
+				&& !reponse.getExpertID().isEmpty()) {
+			dbFacade.sauvegardeReponse(reponse);
 		}
+	}
+	
+	public Reponse getReponsePourQuestion(Question question) {
+		Reponse reponse = null;
+		
+		if (question != null) {
+			reponse = dbFacade.getReponsePourQuestion(question);
+		}
+		 
+		return reponse;
 	}
 }

@@ -11,16 +11,32 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
-package com.eecs.seg2505.expertqr.model;
+package ca.uottawa.eecs.seg2505.expertqr.controlleur;
 
-import java.io.Serializable;
+import ca.uottawa.eecs.seg2505.expertqr.db.DBFacade;
+import ca.uottawa.eecs.seg2505.expertqr.model.Expertise;
 
 /**
  * @author Hanna
  *
  */
-public class UtilisateurRole implements Serializable {
+public class ExpertiseControlleur {
 
-	private static final long serialVersionUID = -5798359383304635795L;
-
+	protected DBFacade dbFacade = null;
+	
+	public ExpertiseControlleur(DBFacade dbFacade) {
+		this.dbFacade = dbFacade;
+	}
+	
+	/**
+	 * Méthode pour sauvegarder une Expertise
+	 * @param expertise
+	 */
+	public void sauvegardeExpertise(Expertise expertise) {
+		if (expertise != null
+				&& expertise.getTexte() != null
+				&& !expertise.getTexte().isEmpty()) {
+			dbFacade.sauvegardeExpertise(expertise);
+		}
+	}
 }

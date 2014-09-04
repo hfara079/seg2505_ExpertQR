@@ -11,7 +11,7 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
-package com.eecs.seg2505.expertqr.model;
+package ca.uottawa.eecs.seg2505.expertqr.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -20,15 +20,52 @@ import java.util.ArrayList;
  * @author Hanna
  *
  */
-public class Questionneur extends UtilisateurRole implements Serializable {
-
-	private static final long serialVersionUID = -8158085400260818751L;
+public class Expert extends UtilisateurRole implements Serializable {
+	
+	private static final long serialVersionUID = 5736373841598132425L;
 	/**
 	 */
-	protected ArrayList<Reponse> listeQuestions = new ArrayList<Reponse>();
-	
-	public ArrayList<Reponse> getListeQuestions() {
-		return listeQuestions;
+	protected Expertise expertise = null;
+	/**
+	 */
+	protected double cote = -1;
+	/**
+	 */
+	protected ArrayList<Reponse> listeReponses = new ArrayList<Reponse>();
+
+	public Expert() {
+		super();
 	}
 
+	/**
+	 * @return
+	 */
+	public Expertise getExpertise() {
+		return expertise;
+	}
+
+	/**
+	 * @param expertiseID
+	 */
+	public void setExpertise(Expertise expertise) {
+		this.expertise = expertise;
+	}
+
+	/**
+	 * @return
+	 */
+	public double getCote() {
+		return cote;
+	}
+
+	/**
+	 * @param cote
+	 */
+	public void setCote(double cote) {
+		this.cote = cote;
+	}
+	
+	public ArrayList<Reponse> getListeReponses() {
+		return listeReponses;
+	}
 }

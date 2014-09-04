@@ -11,12 +11,12 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
-package com.eecs.seg2505.expertqr.model;
+package ca.uottawa.eecs.seg2505.expertqr.model;
 
 import java.io.Serializable;
 import java.util.UUID;
 
-import com.eecs.seg2505.expertqr.Constantes;
+import ca.uottawa.eecs.seg2505.expertqr.Constantes;
 
 /**
  * @author Hanna

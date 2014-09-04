@@ -11,14 +11,14 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
-package com.eecs.seg2505.expertqr.db;
+package ca.uottawa.eecs.seg2505.expertqr.db;
 
 import java.util.List;
 
-import com.eecs.seg2505.expertqr.model.Expertise;
-import com.eecs.seg2505.expertqr.model.Question;
-import com.eecs.seg2505.expertqr.model.Reponse;
-import com.eecs.seg2505.expertqr.model.Utilisateur;
+import ca.uottawa.eecs.seg2505.expertqr.model.Expertise;
+import ca.uottawa.eecs.seg2505.expertqr.model.Question;
+import ca.uottawa.eecs.seg2505.expertqr.model.Reponse;
+import ca.uottawa.eecs.seg2505.expertqr.model.Utilisateur;
 
 /**
  * @author Hanna

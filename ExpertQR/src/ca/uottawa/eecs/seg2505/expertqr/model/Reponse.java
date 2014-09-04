@@ -11,33 +11,33 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
-package com.eecs.seg2505.expertqr.model;
+package ca.uottawa.eecs.seg2505.expertqr.model;
 
 import java.io.Serializable;
 
-import com.eecs.seg2505.expertqr.Constantes;
+import ca.uottawa.eecs.seg2505.expertqr.Constantes;
 
 /**
  * @author Hanna
  *
  */
-public class Question implements Serializable {
+public class Reponse implements Serializable {
 	
-	private static final long serialVersionUID = 3934812072582712484L;
+	private static final long serialVersionUID = 2028078514689553029L;
 	/**
 	 */
 	protected String texte = Constantes.STRING_VIDE;
 	/**
 	 */
-	protected String expertiseRequise = Constantes.STRING_VIDE;
+	protected String expertID = Constantes.STRING_VIDE;
 	/**
 	 */
-	protected String utilisateurID = Constantes.STRING_VIDE;
+	protected int evaluation = -1;
 	/**
 	 */
-	protected Reponse reponse = null;
+	protected Question question = null;
 	
-	public Question() {	
+	public Reponse() {	
 	}
 	
 	/**
@@ -57,42 +57,42 @@ public class Question implements Serializable {
 	/**
 	 * @return
 	 */
-	public String getExpertiseRequise() {
-		return expertiseRequise;
+	public String getExpertID() {
+		return expertID;
 	}
 	
 	/**
-	 * @param expertise
+	 * @param expertID
 	 */
-	public void setExpertiseRequise(String expertise) {
-		this.expertiseRequise = expertise;
+	public void setExpertID(String expertID) {
+		this.expertID = expertID;
 	}
 	
 	/**
 	 * @return
 	 */
-	public String getUtilisateurID() {
-		return utilisateurID;
+	public int getEvaluation() {
+		return evaluation;
 	}
 	
 	/**
-	 * @param utilisateurID
+	 * @param eval
 	 */
-	public void setUtilisateurID(String utilisateurID) {
-		this.utilisateurID = utilisateurID;
+	public void setEvaluation(int eval) {
+		this.evaluation = eval;
 	}
 
 	/**
 	 * @return
 	 */
-	public Reponse getReponse() {
-		return reponse;
+	public Question getQuestion() {
+		return question;
 	}
 
 	/**
-	 * @param reponse
+	 * @param question
 	 */
-	public void setReponse(Reponse reponse) {
-		this.reponse = reponse;
+	public void setQuestion(Question question) {
+		this.question = question;
 	}
 }

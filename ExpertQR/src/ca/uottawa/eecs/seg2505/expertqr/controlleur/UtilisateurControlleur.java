@@ -11,37 +11,34 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
-package com.eecs.seg2505.expertqr.model;
+package ca.uottawa.eecs.seg2505.expertqr.controlleur;
 
-import java.io.Serializable;
-
-import com.eecs.seg2505.expertqr.Constantes;
+import ca.uottawa.eecs.seg2505.expertqr.db.DBFacade;
+import ca.uottawa.eecs.seg2505.expertqr.model.Utilisateur;
 
 /**
  * @author Hanna
  *
  */
-public class Expertise implements Serializable {
-
-	private static final long serialVersionUID = -3235529468817495364L;
-	/**
-	 */
-	protected String texte = Constantes.STRING_VIDE;
+public class UtilisateurControlleur {
 	
-	public Expertise() {
+	protected DBFacade dbFacade = null;
+	
+	public UtilisateurControlleur(DBFacade dbFacade) {
+		this.dbFacade = dbFacade;
 	}
 	
 	/**
-	 * @return
+	 * Méthode pour sauvegarder un Utilisateur
+	 * @param utilisateur
 	 */
-	public String getTexte() {
-		return texte;
-	}
-	
-	/**
-	 * @param texte
-	 */
-	public void setTexte(String texte) {
-		this.texte = texte;
+	public void sauvegardeUtilisateur(Utilisateur utilisateur) {
+		if (utilisateur != null
+				&& utilisateur.getNom() != null
+				&& !utilisateur.getNom().isEmpty()
+				&& utilisateur.getID() != null
+				&& !utilisateur.getID().isEmpty()) {
+			dbFacade.sauvegardeUtilisateur(utilisateur);
+		}
 	}
 }

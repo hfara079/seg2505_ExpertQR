@@ -11,20 +11,20 @@
  * The author disclaims all warranties with regard to this software, any use,
  * and any consequent failure, is purely the responsibility of the user.
  */
-package com.eecs.seg2505.expertqr;
+package ca.uottawa.eecs.seg2505.expertqr;
 
 import java.util.List;
 
-import com.eecs.seg2505.expertqr.controlleur.ExpertiseControlleur;
-import com.eecs.seg2505.expertqr.controlleur.QuestionControlleur;
-import com.eecs.seg2505.expertqr.controlleur.ReponseControlleur;
-import com.eecs.seg2505.expertqr.controlleur.UtilisateurControlleur;
-import com.eecs.seg2505.expertqr.db.DBFacade;
-import com.eecs.seg2505.expertqr.db.ParseFacade;
-import com.eecs.seg2505.expertqr.model.Expertise;
-import com.eecs.seg2505.expertqr.model.Question;
-import com.eecs.seg2505.expertqr.model.Reponse;
-import com.eecs.seg2505.expertqr.model.Utilisateur;
+import ca.uottawa.eecs.seg2505.expertqr.controlleur.ExpertiseControlleur;
+import ca.uottawa.eecs.seg2505.expertqr.controlleur.QuestionControlleur;
+import ca.uottawa.eecs.seg2505.expertqr.controlleur.ReponseControlleur;
+import ca.uottawa.eecs.seg2505.expertqr.controlleur.UtilisateurControlleur;
+import ca.uottawa.eecs.seg2505.expertqr.db.DBFacade;
+import ca.uottawa.eecs.seg2505.expertqr.db.ParseFacade;
+import ca.uottawa.eecs.seg2505.expertqr.model.Expertise;
+import ca.uottawa.eecs.seg2505.expertqr.model.Question;
+import ca.uottawa.eecs.seg2505.expertqr.model.Reponse;
+import ca.uottawa.eecs.seg2505.expertqr.model.Utilisateur;
 
 /**
  * @author Hanna

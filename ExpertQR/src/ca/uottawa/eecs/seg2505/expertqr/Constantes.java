@@ -12,7 +12,7 @@
  * and any consequent failure, is purely the responsibility of the user.
  */
 
-package com.eecs.seg2505.expertqr;
+package ca.uottawa.eecs.seg2505.expertqr;
 
 /**
  * @author Hanna
