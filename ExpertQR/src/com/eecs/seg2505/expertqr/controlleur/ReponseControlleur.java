@@ -17,6 +17,10 @@ import com.eecs.seg2505.expertqr.db.DBFacade;
 import com.eecs.seg2505.expertqr.model.Question;
 import com.eecs.seg2505.expertqr.model.Reponse;
 
+/**
+ * @author Hanna
+ *
+ */
 public class ReponseControlleur {
 
 	protected DBFacade dbFacade = null;

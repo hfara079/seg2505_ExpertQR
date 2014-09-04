@@ -20,6 +20,10 @@ import com.eecs.seg2505.expertqr.model.Expertise;
 import com.eecs.seg2505.expertqr.model.Question;
 import com.eecs.seg2505.expertqr.model.Utilisateur;
 
+/**
+ * @author Hanna
+ *
+ */
 public class QuestionControlleur {
 	
 	protected DBFacade dbFacade = null;

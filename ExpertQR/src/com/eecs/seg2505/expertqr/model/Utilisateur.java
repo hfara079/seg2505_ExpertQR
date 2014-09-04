@@ -18,6 +18,10 @@ import java.util.UUID;
 
 import com.eecs.seg2505.expertqr.Constantes;
 
+/**
+ * @author Hanna
+ *
+ */
 public class Utilisateur implements Serializable {
 	
 	private static final long serialVersionUID = 5825260818261095125L;

@@ -16,6 +16,10 @@ package com.eecs.seg2505.expertqr.controlleur;
 import com.eecs.seg2505.expertqr.db.DBFacade;
 import com.eecs.seg2505.expertqr.model.Utilisateur;
 
+/**
+ * @author Hanna
+ *
+ */
 public class UtilisateurControlleur {
 	
 	protected DBFacade dbFacade = null;

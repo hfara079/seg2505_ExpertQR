@@ -14,6 +14,10 @@
 
 package com.eecs.seg2505.expertqr;
 
+/**
+ * @author Hanna
+ *
+ */
 public class Constantes {
 
 	public static String STRING_VIDE = "";

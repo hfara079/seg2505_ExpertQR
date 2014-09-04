@@ -16,6 +16,10 @@ package com.eecs.seg2505.expertqr.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * @author Hanna
+ *
+ */
 public class Questionneur extends UtilisateurRole implements Serializable {
 
 	private static final long serialVersionUID = -8158085400260818751L;

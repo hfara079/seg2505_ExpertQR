@@ -20,6 +20,10 @@ import com.eecs.seg2505.expertqr.model.Question;
 import com.eecs.seg2505.expertqr.model.Reponse;
 import com.eecs.seg2505.expertqr.model.Utilisateur;
 
+/**
+ * @author Hanna
+ *
+ */
 public class ParseFacade extends DBFacade {
 
 	@Override

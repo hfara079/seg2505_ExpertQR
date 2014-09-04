@@ -16,6 +16,10 @@ package com.eecs.seg2505.expertqr.controlleur;
 import com.eecs.seg2505.expertqr.db.DBFacade;
 import com.eecs.seg2505.expertqr.model.Expertise;
 
+/**
+ * @author Hanna
+ *
+ */
 public class ExpertiseControlleur {
 
 	protected DBFacade dbFacade = null;

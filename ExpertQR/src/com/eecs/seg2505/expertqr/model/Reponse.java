@@ -17,6 +17,10 @@ import java.io.Serializable;
 
 import com.eecs.seg2505.expertqr.Constantes;
 
+/**
+ * @author Hanna
+ *
+ */
 public class Reponse implements Serializable {
 	
 	private static final long serialVersionUID = 2028078514689553029L;
