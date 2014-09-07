@@ -14,7 +14,6 @@
 package ca.uottawa.eecs.seg2505.expertqr.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 /**
  * @author Hanna
@@ -23,12 +22,5 @@ import java.util.ArrayList;
 public class Questionneur extends UtilisateurRole implements Serializable {
 
 	private static final long serialVersionUID = -8158085400260818751L;
-	/**
-	 */
-	protected ArrayList<Question> listeQuestions = new ArrayList<Question>();
-	
-	public ArrayList<Question> getListeQuestions() {
-		return listeQuestions;
-	}
 
 }

@@ -14,7 +14,6 @@
 package ca.uottawa.eecs.seg2505.expertqr.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 /**
  * @author Hanna
@@ -29,9 +28,6 @@ public class Expert extends UtilisateurRole implements Serializable {
 	/**
 	 */
 	protected double cote = -1;
-	/**
-	 */
-	protected ArrayList<Reponse> listeReponses = new ArrayList<Reponse>();
 
 	public Expert() {
 		super();
@@ -63,9 +59,5 @@ public class Expert extends UtilisateurRole implements Serializable {
 	 */
 	public void setCote(double cote) {
 		this.cote = cote;
-	}
-	
-	public ArrayList<Reponse> getListeReponses() {
-		return listeReponses;
 	}
 }
