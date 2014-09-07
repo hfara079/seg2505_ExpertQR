@@ -20,7 +20,6 @@ import ca.uottawa.eecs.seg2505.expertqr.controlleur.QuestionControlleur;
 import ca.uottawa.eecs.seg2505.expertqr.controlleur.ReponseControlleur;
 import ca.uottawa.eecs.seg2505.expertqr.controlleur.UtilisateurControlleur;
 import ca.uottawa.eecs.seg2505.expertqr.db.DBFacade;
-import ca.uottawa.eecs.seg2505.expertqr.db.ParseFacade;
 import ca.uottawa.eecs.seg2505.expertqr.model.Expertise;
 import ca.uottawa.eecs.seg2505.expertqr.model.Question;
 import ca.uottawa.eecs.seg2505.expertqr.model.Reponse;
@@ -32,12 +31,18 @@ import ca.uottawa.eecs.seg2505.expertqr.model.Utilisateur;
  */
 public class Delegateur {
 	
-	public static DBFacade dbFacade = new ParseFacade();
-	public static QuestionControlleur questionControlleur = new QuestionControlleur(dbFacade);
-	public static ReponseControlleur reponseControlleur = new ReponseControlleur(dbFacade);
-	public static UtilisateurControlleur utilisateurControlleur = new UtilisateurControlleur(dbFacade);
-	public static ExpertiseControlleur expertiseControlleur = new ExpertiseControlleur(dbFacade);
+	public static DBFacade dbFacade = null;
+	public static QuestionControlleur questionControlleur = null;
+	public static ReponseControlleur reponseControlleur = null;
+	public static UtilisateurControlleur utilisateurControlleur = null;
+	public static ExpertiseControlleur expertiseControlleur = null;
 	
+	public static void setDBFacade(DBFacade dbFacade) {
+		questionControlleur = new QuestionControlleur(dbFacade);
+		reponseControlleur = new ReponseControlleur(dbFacade);
+		utilisateurControlleur = new UtilisateurControlleur(dbFacade);
+		expertiseControlleur = new ExpertiseControlleur(dbFacade);
+	}
 	
 	public static List<Question> getQuestionsPourExpertise(Expertise expertise) {
 		return questionControlleur.getQuestionsPourExpertise(expertise);
@@ -49,6 +54,42 @@ public class Delegateur {
 	
 	public static Reponse getReponsePourQuestion(Question question) {
 		return reponseControlleur.getReponsePourQuestion(question);
+	}
+	
+	public static List<Utilisateur> getExpertPourExpertise(Expertise expertise) {
+		return utilisateurControlleur.getExpertPourExpertise(expertise);
+	}
+	
+	/**
+	 * Méthode pour sauvegarder une Question
+	 * @param question
+	 */
+	public static void sauvegardeQuestion(Question question) {
+		questionControlleur.sauvegardeQuestion(question);
+	}
+	
+	/**
+	 * Méthode pour sauvegarder une Reponse
+	 * @param reponse
+	 */
+	public static void sauvegardeReponse(Reponse reponse) {
+		reponseControlleur.sauvegardeReponse(reponse);
+	}
+	
+	/**
+	 * Méthode pour sauvegarder un Utilisateur
+	 * @param utilisateur
+	 */
+	public static void sauvegardeUtilisateur(Utilisateur utilisateur) {
+		utilisateurControlleur.sauvegardeUtilisateur(utilisateur);
+	}
+	
+	/**
+	 * Méthode pour sauvegarder une Expertise
+	 * @param expertise
+	 */
+	public static void sauvegardeExpertise(Expertise expertise) {
+		expertiseControlleur.sauvegardeExpertise(expertise);
 	}
 
 }

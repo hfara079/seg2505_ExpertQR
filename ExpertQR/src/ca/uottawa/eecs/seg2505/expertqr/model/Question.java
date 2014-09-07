@@ -29,7 +29,7 @@ public class Question implements Serializable {
 	protected String texte = Constantes.STRING_VIDE;
 	/**
 	 */
-	protected String expertiseRequise = Constantes.STRING_VIDE;
+	protected Expertise expertiseRequise = null;
 	/**
 	 */
 	protected String utilisateurID = Constantes.STRING_VIDE;
@@ -57,14 +57,14 @@ public class Question implements Serializable {
 	/**
 	 * @return
 	 */
-	public String getExpertiseRequise() {
+	public Expertise getExpertiseRequise() {
 		return expertiseRequise;
 	}
 	
 	/**
 	 * @param expertise
 	 */
-	public void setExpertiseRequise(String expertise) {
+	public void setExpertiseRequise(Expertise expertise) {
 		this.expertiseRequise = expertise;
 	}
 	

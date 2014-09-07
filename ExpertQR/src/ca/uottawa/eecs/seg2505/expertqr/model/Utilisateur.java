@@ -35,10 +35,10 @@ public class Utilisateur implements Serializable {
 	// les roles que l'utilisateur peut jouer
 	/**
 	 */
-	protected UtilisateurRole roleQuestionneur = null;
+	protected Questionneur roleQuestionneur = null;
 	/**
 	 */
-	protected UtilisateurRole roleExpert = null;
+	protected Expert roleExpert = null;
 	
 	public Utilisateur() {
 		this.ID = UUID.randomUUID().toString();
@@ -68,28 +68,28 @@ public class Utilisateur implements Serializable {
 	/**
 	 * @return
 	 */
-	public UtilisateurRole getRoleQuestionneur() {
+	public Questionneur getRoleQuestionneur() {
 		return roleQuestionneur;
 	}
 
 	/**
 	 * @param roleQuestionneur
 	 */
-	public void setRoleQuestionneur(UtilisateurRole roleQuestionneur) {
+	public void setRoleQuestionneur(Questionneur roleQuestionneur) {
 		this.roleQuestionneur = roleQuestionneur;
 	}
 
 	/**
 	 * @return
 	 */
-	public UtilisateurRole getRoleExpert() {
+	public Expert getRoleExpert() {
 		return roleExpert;
 	}
 
 	/**
 	 * @param roleExpert
 	 */
-	public void setRoleExpert(UtilisateurRole roleExpert) {
+	public void setRoleExpert(Expert roleExpert) {
 		this.roleExpert = roleExpert;
 	}
 }
