@@ -11,10 +11,10 @@ import ca.uottawa.eecs.seg2505.expertqr.model.Utilisateur;
 public class MemoireFacade extends DBFacade {
 
 	// garder tous les donnees en memoire
-	List<Question> questions = new ArrayList<Question>();
-	List<Expertise> expertises = new ArrayList<Expertise>();
-	List<Reponse> reponses = new ArrayList<Reponse>();
-	List<Utilisateur> utilisateurs = new ArrayList<Utilisateur>();
+	protected List<Question> questions = new ArrayList<Question>();
+	protected List<Expertise> expertises = new ArrayList<Expertise>();
+	protected List<Reponse> reponses = new ArrayList<Reponse>();
+	protected List<Utilisateur> utilisateurs = new ArrayList<Utilisateur>();
 
 	@Override
 	public List<Question> getQuestionsPourExpertise(String expertise) {
